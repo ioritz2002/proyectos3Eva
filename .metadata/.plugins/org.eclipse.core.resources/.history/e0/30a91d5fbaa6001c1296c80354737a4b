@@ -1,6 +1,5 @@
 package controlador;
 
-import modelo.ControladorDatos;
 import modelo.ImplementacionControladorBD;
 import vista.VPrincipal;
 
@@ -9,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		ControladorDatos datos = new ImplementacionControladorBD();
 		
-		VPrincipal principal = new VPrincipal(datos);
+		VPrincipal principal = new VPrincipal();
 		principal.setVisible(true);
 	}
 
