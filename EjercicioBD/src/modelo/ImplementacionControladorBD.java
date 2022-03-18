@@ -17,7 +17,7 @@ public class ImplementacionControladorBD implements ControladorDatos{
 	
 	//Conexion
 	private String url = "jdbc:mysql://localhost:3306/bdcoches?serverTimezone=Europe/Madrid&useSSL=false";
-	private String usuario = "root";
+	private String usuario = "adminTemp";
 	private String contraseña = "abcd*1234";
 	
 	//SQL

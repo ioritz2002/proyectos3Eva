@@ -38,6 +38,7 @@ public class VPropietario extends JDialog implements ActionListener{
 	public VPropietario(VPrincipal vPrincipal, boolean b, ControladorDatos datos) {
 		super(vPrincipal);
 		this.setModal(b);
+		this.datos = datos;
 		setBounds(100, 100, 752, 568);
 		getContentPane().setLayout(null);
 		{
@@ -99,8 +100,15 @@ public class VPropietario extends JDialog implements ActionListener{
 			prop.setNombre(txtNombre.getText());
 			prop.setFechaNacimiento(LocalDate.parse(txtFechaNacimiento.getText()));
 			
-			
+			datos.altaPropietario(prop);
+			limpiar();
 		}
 		
+	}
+	
+	private void limpiar() {
+		txtId.setText("");
+		txtNombre.setText("");
+		txtFechaNacimiento.setText("");
 	}
 }
