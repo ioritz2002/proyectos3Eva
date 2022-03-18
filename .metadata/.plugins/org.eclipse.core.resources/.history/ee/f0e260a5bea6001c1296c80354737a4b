@@ -15,7 +15,6 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.LocalDate;
 
 import javax.swing.JTextField;
 
@@ -26,7 +25,6 @@ public class VPropietario extends JDialog implements ActionListener{
 	private JButton btnBaja;
 	private JButton btnModificacion;
 	private JButton btnAlta;
-	private ControladorDatos datos;
 
 
 	/**
@@ -97,9 +95,6 @@ public class VPropietario extends JDialog implements ActionListener{
 			
 			prop.setIdentificador(txtId.getText());
 			prop.setNombre(txtNombre.getText());
-			prop.setFechaNacimiento(LocalDate.parse(txtFechaNacimiento.getText()));
-			
-			
 		}
 		
 	}

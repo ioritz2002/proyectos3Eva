@@ -26,7 +26,6 @@ public class VPropietario extends JDialog implements ActionListener{
 	private JButton btnBaja;
 	private JButton btnModificacion;
 	private JButton btnAlta;
-	private ControladorDatos datos;
 
 
 	/**
@@ -98,8 +97,6 @@ public class VPropietario extends JDialog implements ActionListener{
 			prop.setIdentificador(txtId.getText());
 			prop.setNombre(txtNombre.getText());
 			prop.setFechaNacimiento(LocalDate.parse(txtFechaNacimiento.getText()));
-			
-			
 		}
 		
 	}
