@@ -1,0 +1,76 @@
+package vista;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+public class VCoche extends JDialog {
+	public VCoche() {
+	}
+
+	private JTextField txtId;
+	private JTextField txtNombre;
+	private JTextField txtFechaNacimiento;
+	private JButton btnBaja;
+	private JButton btnModificacion;
+	private JButton btnAlta;
+
+
+	/**
+	 * Create the dialog.
+	 */
+	public VPropietario() {
+		setBounds(100, 100, 752, 568);
+		getContentPane().setLayout(null);
+		{
+			JLabel lblNewLabel = new JLabel("ID");
+			lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			lblNewLabel.setBounds(67, 80, 139, 63);
+			getContentPane().add(lblNewLabel);
+		}
+		
+		txtId = new JTextField();
+		txtId.setBounds(164, 103, 222, 26);
+		getContentPane().add(txtId);
+		txtId.setColumns(10);
+		
+		JLabel lblNombre = new JLabel("Nombre");
+		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNombre.setBounds(54, 137, 139, 63);
+		getContentPane().add(lblNombre);
+		
+		JLabel lblFechaNacimiento = new JLabel("Fecha nacimiento");
+		lblFechaNacimiento.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblFechaNacimiento.setBounds(54, 223, 139, 63);
+		getContentPane().add(lblFechaNacimiento);
+		
+		txtNombre = new JTextField();
+		txtNombre.setColumns(10);
+		txtNombre.setBounds(164, 160, 222, 26);
+		getContentPane().add(txtNombre);
+		
+		txtFechaNacimiento = new JTextField();
+		txtFechaNacimiento.setColumns(10);
+		txtFechaNacimiento.setBounds(207, 246, 222, 26);
+		getContentPane().add(txtFechaNacimiento);
+		
+		btnAlta = new JButton("Alta");
+		btnAlta.setBounds(480, 93, 165, 41);
+		getContentPane().add(btnAlta);
+		
+		btnModificacion = new JButton("Modificacion");
+		btnModificacion.setBounds(480, 177, 165, 41);
+		getContentPane().add(btnModificacion);
+		
+		btnBaja = new JButton("Baja");
+		btnBaja.setBounds(480, 278, 165, 41);
+		getContentPane().add(btnBaja);
+
+}

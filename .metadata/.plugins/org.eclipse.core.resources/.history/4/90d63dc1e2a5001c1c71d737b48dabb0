@@ -1,0 +1,8 @@
+package modelo;
+
+import clases.Propietario;
+
+public interface ControladorDatos {
+	public void altaPropietario(Propietario prop);
+	public void modificarPropietario(Propietario prop);
+}

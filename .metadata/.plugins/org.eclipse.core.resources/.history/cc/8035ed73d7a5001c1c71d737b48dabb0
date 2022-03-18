@@ -1,0 +1,11 @@
+package clases;
+
+import java.time.LocalDate;
+
+public class Propietario {
+	private String identificador;
+	private String nombre;
+	private LocalDate fechaNacimiento;
+	
+	
+}

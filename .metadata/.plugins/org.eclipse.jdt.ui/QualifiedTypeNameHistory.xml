@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="ventanas.VSecundaria"/>
+    <fullyQualifiedTypeName name="ventanas.VPrincipal"/>
+    <fullyQualifiedTypeName name="vista.VPrincipal"/>
+    <fullyQualifiedTypeName name="vista.VFormulario"/>
+    <fullyQualifiedTypeName name="vista.VContraseniaIncorrecta"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="javax.swing.ButtonGroup"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="clases.Propietario"/>
+    <fullyQualifiedTypeName name="com.sun.tools.classfile.Opcode.Set"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="clases.Coche"/>
+    <fullyQualifiedTypeName name="modelo.ControladorDatos"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,92 @@
+package modelo;
+
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Map;
+
+import clases.Coche;
+import clases.Propietario;
+
+public class ImplementacionControladorBD implements ControladorDatos{
+
+	private Conection conex;
+	private PreparedStatement stmt;
+	private String url;
+	private String usuario;
+	private String contraseña;
+	
+	public void openConnection() {
+		conex = DriverManager.getConnection(null, null, null)
+	}
+	
+	public void closeConnection() throws SQLException{
+		
+	}
+	
+	@Override
+	public void altaPropietario(Propietario prop) {
+		
+	}
+
+	@Override
+	public Propietario buscarPropietario(String codigo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void modificarPropietario(Propietario prop) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void eliminarPropietario(Propietario prop) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Map<String, Propietario> listarPropietarios() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void altaCoche(Coche coch) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Coche buscarCoche(String matricula) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void modificarCoche(Coche coch) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void eliminarCoche(Coche coch) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Map<String, Coche> listarCoches() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Map<String, Coche> listarCochesPropietario(Propietario prop) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
