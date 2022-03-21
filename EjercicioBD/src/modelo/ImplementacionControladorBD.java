@@ -4,7 +4,9 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.Map;
 
 import clases.Coche;
@@ -22,6 +24,7 @@ public class ImplementacionControladorBD implements ControladorDatos{
 	
 	//SQL
 	final String INSERTpropietario = "INSERT INTO propietario(ID_PROPIETARIO, NOMBRE, FECHA_NAC) VALUES(?,?,?)";
+	final String CONSULTARpropietarios = "SELECT * FROM propietario";
 	
 	public void openConnection() {
 		try {
@@ -85,8 +88,38 @@ public class ImplementacionControladorBD implements ControladorDatos{
 
 	@Override
 	public Map<String, Propietario> listarPropietarios() {
-		// TODO Auto-generated method stub
-		return null;
+		Map<String, Propietario> propietarios = new HashMap<String, Propietario>();
+		ResultSet rs = null;
+		Propietario propietario = null;
+		openConnection();
+		try {
+			stmt = conex.prepareStatement(CONSULTARpropietarios);
+			rs = stmt.executeQuery();
+			while (rs.next()) {
+				propietario = new Propietario();
+				propietario.setIdentificador(rs.getString(1));
+				propietario.setNombre(rs.getString(2));
+				propietario.setFechaNacimiento(rs.getDate(3).toLocalDate());
+				propietarios.put(propietario.getIdentificador(), propietario);
+			}			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if (rs != null) {
+				try {
+					rs.close();
+					closeConnection();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		
+		return propietarios;
 	}
 
 	@Override

@@ -2,11 +2,7 @@
 <section name="Workbench">
 	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-11"/>
-<<<<<<< HEAD
 	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\projectos java\3evaluacion"/>
-=======
-	<item key="org.eclipse.jdt.ui.lastextjar" value="E:\ejerciciosJava\proyectos3Eva"/>
->>>>>>> 04aa7b3768c632a9a5f56200b5a5527fef9ba553
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>
@@ -54,10 +50,7 @@
 	<section name="BuildPathsPropertyPage">
 		<item key="pageIndex" value="2"/>
 	</section>
-<<<<<<< HEAD
 	<section name="ClasspathContainerSelectionPage">
 		<item key="index" value="8"/>
 	</section>
-=======
->>>>>>> 04aa7b3768c632a9a5f56200b5a5527fef9ba553
 </section>

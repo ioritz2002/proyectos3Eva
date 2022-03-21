@@ -33,6 +33,7 @@ public class VPropietario extends JDialog implements ActionListener {
 	 * 
 	 * @param b
 	 * @param vPrincipal
+	 * @param seleccionarPropietario
 	 * @param datos
 	 */
 	public VPropietario(VPrincipal vPrincipal, boolean b, ControladorDatos datos) {
@@ -88,6 +89,69 @@ public class VPropietario extends JDialog implements ActionListener {
 		btnAlta.addActionListener(this);
 		btnModificacion.addActionListener(this);
 		btnBaja.addActionListener(this);
+
+	}
+
+	public VPropietario(SeleccionarPropietario seleccionarPropietario, Propietario propietario, boolean b, ControladorDatos datos) {
+		super(seleccionarPropietario);
+		this.setModal(b);
+		this.datos = datos;
+		setBounds(100, 100, 752, 568);
+		getContentPane().setLayout(null);
+		{
+			JLabel lblNewLabel = new JLabel("ID");
+			lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			lblNewLabel.setBounds(68, 83, 139, 63);
+			getContentPane().add(lblNewLabel);
+		}
+
+		txtId = new JTextField();
+		txtId.setBounds(164, 103, 222, 26);
+		getContentPane().add(txtId);
+		txtId.setColumns(10);
+
+		JLabel lblNombre = new JLabel("Nombre");
+		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNombre.setBounds(54, 170, 139, 63);
+		getContentPane().add(lblNombre);
+
+		JLabel lblFechaNacimiento = new JLabel("Fecha nacimiento");
+		lblFechaNacimiento.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblFechaNacimiento.setBounds(54, 244, 139, 63);
+		getContentPane().add(lblFechaNacimiento);
+
+		txtNombre = new JTextField();
+		txtNombre.setColumns(10);
+		txtNombre.setBounds(164, 184, 222, 26);
+		getContentPane().add(txtNombre);
+
+		txtFechaNacimiento = new JTextField();
+		txtFechaNacimiento.setColumns(10);
+		txtFechaNacimiento.setBounds(203, 264, 222, 26);
+		getContentPane().add(txtFechaNacimiento);
+
+		btnAlta = new JButton("Alta");
+		btnAlta.setBounds(480, 93, 165, 41);
+		getContentPane().add(btnAlta);
+
+		btnModificacion = new JButton("Modificacion");
+		btnModificacion.setBounds(480, 177, 165, 41);
+		getContentPane().add(btnModificacion);
+
+		btnBaja = new JButton("Baja");
+		btnBaja.setBounds(480, 257, 165, 41);
+		getContentPane().add(btnBaja);
+
+		btnAlta.addActionListener(this);
+		btnModificacion.addActionListener(this);
+		btnBaja.addActionListener(this);
+
+		mostrarDatos();
+
+	}
+
+	private void mostrarDatos() {
+		
 	}
 
 	@Override
@@ -110,6 +174,5 @@ public class VPropietario extends JDialog implements ActionListener {
 		txtNombre.setText("");
 		txtFechaNacimiento.setText("");
 	}
-
 
 }

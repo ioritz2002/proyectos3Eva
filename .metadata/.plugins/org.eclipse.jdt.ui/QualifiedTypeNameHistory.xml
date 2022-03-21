@@ -23,4 +23,5 @@
     <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="clases.Propietario"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="vista.SeleccionarPropietario"/>
 </qualifiedTypeNameHistroy>
