@@ -38,7 +38,6 @@ public class VPropietario extends JDialog implements ActionListener {
 	public VPropietario(VPrincipal vPrincipal, boolean b, ControladorDatos datos) {
 		super(vPrincipal);
 		this.setModal(b);
-		this.datos = datos;
 		setBounds(100, 100, 752, 568);
 		getContentPane().setLayout(null);
 		{
