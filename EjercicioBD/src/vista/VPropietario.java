@@ -111,4 +111,5 @@ public class VPropietario extends JDialog implements ActionListener {
 		txtFechaNacimiento.setText("");
 	}
 
+
 }
