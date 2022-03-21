@@ -10,6 +10,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+
+import modelo.ControladorDatos;
+
 import javax.swing.JComboBox;
 
 public class VCoche extends JDialog {
@@ -34,8 +37,9 @@ public class VCoche extends JDialog {
 	 * Create the dialog.
 	 * @param b 
 	 * @param vPrincipal 
+	 * @param datos 
 	 */
-	public VCoche(VPrincipal vPrincipal, boolean modal) {
+	public VCoche(VPrincipal vPrincipal, boolean modal, ControladorDatos datos) {
 		super(vPrincipal);
 		this.setModal(modal);
 		setBounds(100, 100, 752, 568);

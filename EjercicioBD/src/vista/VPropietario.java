@@ -7,23 +7,38 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import clases.Propietario;
+import modelo.ControladorDatos;
+
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.time.LocalDate;
+
 import javax.swing.JTextField;
 
-public class VPropietario extends JDialog {
+public class VPropietario extends JDialog implements ActionListener{
 	private JTextField txtId;
 	private JTextField txtNombre;
 	private JTextField txtFechaNacimiento;
 	private JButton btnBaja;
 	private JButton btnModificacion;
 	private JButton btnAlta;
+	private ControladorDatos datos;
 
 
 	/**
 	 * Create the dialog.
+	 * @param b 
+	 * @param vPrincipal 
+	 * @param datos 
 	 */
-	public VPropietario() {
+	public VPropietario(VPrincipal vPrincipal, boolean b, ControladorDatos datos) {
+		super(vPrincipal);
+		this.setModal(b);
+		this.datos = datos;
 		setBounds(100, 100, 752, 568);
 		getContentPane().setLayout(null);
 		{
@@ -69,5 +84,31 @@ public class VPropietario extends JDialog {
 		btnBaja = new JButton("Baja");
 		btnBaja.setBounds(480, 257, 165, 41);
 		getContentPane().add(btnBaja);
+		
+		btnAlta.addActionListener(this);
+		btnModificacion.addActionListener(this);
+		btnBaja.addActionListener(this);
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource().equals(btnAlta)) {
+			Propietario prop = new Propietario();
+			
+			prop.setIdentificador(txtId.getText());
+			prop.setNombre(txtNombre.getText());
+			prop.setFechaNacimiento(LocalDate.parse(txtFechaNacimiento.getText()));
+			
+			datos.altaPropietario(prop);
+			limpiar();
+		}
+		
+	}
+	
+	private void limpiar() {
+		txtId.setText("");
+		txtNombre.setText("");
+		txtFechaNacimiento.setText("");
 	}
 }

@@ -20,12 +20,14 @@ public class VPrincipal extends JFrame implements ActionListener{
 	private JButton btnAltaCoche;
 	private JButton btnConsultacoche;
 	private JButton btnConsultapropietario;
+	private ControladorDatos datos;
 	
 	/**
 	 * Create the frame.
 	 * @param datos 
 	 */
 	public VPrincipal(ControladorDatos datos) {
+		this.datos = datos;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 739, 378);
 		contentPane = new JPanel();
@@ -59,15 +61,15 @@ public class VPrincipal extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource().equals(btnAltaCoche)) {
-			VCoche alta = new VCoche(this, true);
+			VCoche alta = new VCoche(this, true, datos);
 			alta.setVisible(true);
 		}
 		if (e.getSource().equals(btnAltapropietario)) {
-			
+			VPropietario alta = new VPropietario(this, true, datos);
+			alta .setVisible(true);
 		}
 		if (e.getSource().equals(btnConsultacoche)) {
-			VCoche consulta = new VCoche(this, true);
-			consulta.setVisible(true);
+			
 		}
 		if (e.getSource().equals(btnConsultapropietario)) {
 			
